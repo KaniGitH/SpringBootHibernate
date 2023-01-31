@@ -26,6 +26,7 @@ public class StudentController {
         tempStudent.getStudentMarks().forEach(studentMarks -> studentMarks.setStudentId(tempStudent.getStudentId()));
         // calculate total marks for each student marks
         tempStudent.getStudentMarks().forEach(studentMarks -> studentMarks.setTotalMarks(studentMarks.getStuTotalMarks(studentMarks)));
+        //tempStudent.getStudentMarks().forEach(studentMarks -> studentMarks.setStudent(tempStudent));
         // save all student marks
         tempStudent.setStudentMarks(serviceMarks.saveStudentMarks(tempStudent.getStudentMarks()));
         return new ResponseEntity<>(tempStudent, HttpStatus.CREATED);
@@ -41,6 +42,7 @@ public class StudentController {
             stu.getStudentMarks().forEach(studentMarks -> studentMarks.setStudentId(stu.getStudentId()));
             // update total marks for each student marks
             stu.getStudentMarks().forEach(studentMarks -> studentMarks.setTotalMarks(studentMarks.getStuTotalMarks(studentMarks)));
+            //stu.getStudentMarks().forEach(studentMarks -> studentMarks.setStudent(stu));
             // save all student marks
             stu.setStudentMarks(serviceMarks.saveStudentMarks(stu.getStudentMarks()));
         }

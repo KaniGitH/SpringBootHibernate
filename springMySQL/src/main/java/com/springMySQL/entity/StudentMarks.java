@@ -43,8 +43,8 @@ public class StudentMarks {
     private double totalMarks;
 
     // Student table relation
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Student student;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    private Student student;
 
     // calculate total marks
     public double getStuTotalMarks(StudentMarks studentMarks) {
